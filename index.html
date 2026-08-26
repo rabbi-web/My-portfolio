@@ -1,0 +1,47 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>আমার পোর্টফোলিও ও ব্লগ</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
+    header { border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 30px; }
+    .post { background: #f9f9f9; border-left: 4px solid #0070f3; padding: 15px 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
+    .post h3 { margin-top: 0; color: #111; }
+    .date { font-size: 0.85em; color: #666; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>স্বাগতম আমার ওয়েবসাইটে</h1>
+    <p>Decap CMS এবং Netlify দিয়ে পরিচালিত পোর্টফোলিও ও ব্লগ</p>
+  </header>
+
+  <main>
+    <h2>সাম্প্রতিক ব্লগ পোস্টসমূহ</h2>
+    <div id="posts">
+      <!-- নমুনা পোস্ট (অ্যাডমিন থেকে নতুন পোস্ট দিলে এগুলো আপডেট হবে) -->
+      <article class="post">
+        <h3>প্রথম ব্লগ পোস্ট</h3>
+        <p class="date">প্রকাশিত: ২৬ আগস্ট, ২০২৬</p>
+        <p>এটি Decap CMS দিয়ে তৈরি একটি টেস্ট পোস্ট। অ্যাডমিন প্যানেল থেকে আপনি যেকোনো সময় নতুন পোস্ট যোগ বা এডিট করতে পারবেন।</p>
+      </article>
+    </div>
+  </main>
+
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
